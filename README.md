@@ -1,4 +1,4 @@
-# NgxCamShoot [![npm version](https://badge.fury.io/js/ngx-cam-shoot.svg)](https://badge.fury.io/js/ngx-cam-shoot) [![Build Status](https://api.travis-ci.com/rzodev/ngx-webcam.svg?branch=master)](https://app.travis-ci.com/github/rzodev/ngx-cam-shoot)
+# NgxCamShoot [![npm version](https://badge.fury.io/js/ngx-cam-shoot.svg)](https://badge.fury.io/js/ngx-cam-shoot) [![Build Status](https://api.travis-ci.com/rzodev/ngx-webcam.svg?branch=master)](https://app.travis-ci.com/github/rzodev/ngx-cam-shoot) [![Support](https://img.shields.io/badge/Support-Angular%2018%2B-blue.svg?style=flat-square)]() [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)]()
 
 An angular component to use you device's cameras easily and obtain and save images faster.
 Thought to use on mobile devices.
