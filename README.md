@@ -85,18 +85,18 @@ openCam(){
 
 **Inputs** You can config the next features
 
-- **config (ICamShootConfig):** obect to set default config (*).
-- **(*)canChangeMode: (boolean = true):** show change mode button;
-- **(*)type (eCamShootType = eCamShootType.DEFAULT):** set the custom camera mode;
-- **(*)color (string = '#282828'):** RGB color for skin;
-- **(*)displayTitle (boolean = true):**  = show title bar;
-- **(*)title (string = 'Capture image'):** title description;
-- **(*)showFaceMode (boolean = false):** show face mode icon on title bar;
-- **usePreview (boolean = true):** active capture preview mode;
-- **showErrors (boolean = false):** show error on camera;
-- **debugMode (boolean = false):** active debug mode;
-- **(*)btnTakeAnother (string = 'Take another'):** text on button to take another capture;
-- **(*)btnAcceptCapture (string = 'Accept capture'):** text on button to accept capture;
+- **[config] (ICamShootConfig):** obect to set default config (*).
+- **(*)[canChangeMode]:** show change mode button (default = true);
+- **(*)[type]:** set the custom camera mode (default = eCamShootType.DEFAULT);
+- **(*)[color]:** Any css color format RGB color for skin (default = '#282828');
+- **(*)[displayTitle]:**  = show title bar (default = true);
+- **(*)[title]:** title description (default = 'Capture image');
+- **(*)[showFaceMode]:** show face mode icon on title bar (default = false);
+- **[usePreview]:** active capture preview mode (default = true);
+- **[showErrors]:** show error on camera (default = false);
+- **[debugMode]:** active debug mode (default = false);
+- **(*)[btnTakeAnother]:** text on button to take another capture (default = 'Take another');
+- **(*)[btnAcceptCapture]:** text on button to accept capture (default = 'Accept capture');
 
 **(*)** These inputs are included in the configuration input.
 
