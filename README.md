@@ -1,24 +1,102 @@
-# NgxCamShoot
+# NgxCamShoot [![npm version](https://badge.fury.io/js/ngx-cam-shoot.svg)](https://badge.fury.io/js/ngx-cam-shoot) [![Build Status](https://api.travis-ci.com/rzodev/ngx-webcam.svg?branch=master)](https://app.travis-ci.com/github/rzodev/ngx-cam-shoot)
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.0.
+An angular component to use you device's cameras easily and obtain and save images faster.
+Thought to use on mobile devices.
 
-## Code scaffolding
 
-Run `ng generate component component-name --project ngxCamShoot` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngxCamShoot`.
-> Note: Don't forget to add `--project ngxCamShoot` or else it will be added to the default project in your `angular.json` file. 
 
-## Build
+## Features
 
-Run `ng build ngxCamShoot` to build the project. The build artifacts will be stored in the `dist/` directory.
+- User interfaz friendly and easily to use
+- FaceMode interactive (change from front to back)
+- Can use Flashlight (If the current camera device support)
+- Preview of image captured
+- Interface color configurable
+- Can select the camera device you want to use
 
-## Publishing
+## Prerequisites
 
-After building your library with `ng build ngxCamShoot`, go to the dist folder `cd dist/ngx-cam-shoot` and run `npm publish`.
+- Angular: >=18.2.0
 
-## Running unit tests
+**Important:** To use in localhost, you must be serve on https context for modern browsers to permit WebRTC/UserMedia access.
 
-Run `ng test ngxCamShoot` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Usage
 
-## Further help
+1. Install via npm
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+`npm i ngx-cam-shoot`
+
+2. Import
+
+You can import the Component in your module
+
+```typescript
+import { NgxCamShoot } from 'ngx-cam-shoot';
+
+@NgModule({
+  imports: [
+    NgxCamShoot,
+    ...
+  ],
+  ...
+})
+```
+
+Or directly on the component where you want to use using **standalone** feature
+
+```typescript
+import { NgxCamShoot } from 'ngx-cam-shoot';
+
+@Component({
+  standalone: true,
+  imports: [
+    NgxCamShoot,
+    ...
+  ]
+  ...
+})
+,
+```
+
+3. Add the NgxCamShoot tag element on yout html component and bind it, you can trigger the cam shoot using the initCapture() method
+
+```html
+<ngx-cam-shoot #cam (sendImage)="receiveCapture($event)"/>
+<button (click)="cam.initCapture()">Take capture</button>
+```
+
+4. To start capture from ts, you first need reference the element and after you can trigger the cam shoot using the initCapture() on your own method
+
+```typescript
+@ViewChild('cam') camShoot!: NgxCamShoot;
+
+openCam(){
+    this.camShoot.initCapture();
+}
+```
+
+5. You can gets the image as Data URI string putting your receiver method on (sendImage) output event
+
+```html
+<ngx-cam-shoot #cam (sendImage)="receiveCapture($event)"/>
+```
+
+## Config
+
+**Inputs** You can config the next features
+
+config (ICamShootConfig): obect to set default config (*).
+*canChangeMode: (boolean = true): show change mode button;
+*type (eCamShootType = eCamShootType.DEFAULT): set the custom camera mode;
+*color (string = '#282828'): RGB color for skin;
+*displayTitle (boolean = true):  = show title bar;
+*title (string = 'Capture image'): title description;
+*showFaceMode (boolean = false): show face mode icon on title bar;
+usePreview (boolean = true): active capture preview mode;
+showErrors (boolean = false): show error on camera;
+debugMode (boolean = false): active debug mode;
+*btnTakeAnother (string = 'Take another'): text on button to take another capture;
+*btnAcceptCapture (string = 'Accept capture'): text on button to accept capture;
+
+**(*)** These inputs are included in the configuration input.
+

@@ -24,13 +24,12 @@ export interface ICamShootDevice{
 export interface ICamShootConfig{
   displayTitle?: boolean;
   title?: string;
-  showTitleFMIcon?: boolean;
+  showFaceMode?: boolean;
   canChangeMode?: boolean;
   type?: eCamShootType;
   color?: string;
   usePreview?: boolean;
   showConfig?: boolean;
-  showFaceMode?: boolean;
   btnTakeAnother?: string;
   btnAcceptCapture?: string;
 }
@@ -93,7 +92,7 @@ interface  IZoomConfig{
     <div *ngIf="debugMode && debug.length>0" class="msgError" [innerHtml]="getDebugInfo()" (dblclick)="debug = ''"></div>
 
     <div class="close-btn" (click)="close()"></div>
-    <div *ngIf="displayTitle" class="head-title">{{title}} <span *ngIf="showTitleFMIcon" [innerHTML]="faceMode=='user'?'😀':'📱'"]></span><!-- <span *ngIf="isLandscape"> (L)</span><span *ngIf="isMobile"> (M)</span> --></div>
+    <div *ngIf="displayTitle" class="head-title">{{title}} <span *ngIf="showFaceMode" [innerHTML]="faceMode=='user'?'😀':'📱'"]></span><!-- <span *ngIf="isLandscape"> (L)</span><span *ngIf="isMobile"> (M)</span> --></div>
 
     <div class="focus-aim" *ngIf="!isDefault()">
       <div class="selfie-aim" *ngIf="isSelfie()">
@@ -722,16 +721,15 @@ export class NgxCamShoot {
 
   @Input() config!: ICamShootConfig;
 
-  @Input() canChangeMode: boolean = false;
+  @Input() canChangeMode: boolean = true;
   @Input() type: eCamShootType = eCamShootType.DEFAULT;
   @Input() color: string = '#282828';
   @Input() displayTitle: boolean = !0;
   @Input() title: string = 'Capture image';
-  @Input() showTitleFMIcon: boolean = true;
+  @Input() showFaceMode: boolean = false;
   @Input() usePreview: boolean = true;
   @Input() showConfig: boolean = false;
   @Input() showErrors: boolean = false;
-  @Input() showFaceMode: boolean = false;
   @Input() debugMode: boolean = false;
   @Input() btnTakeAnother: string = 'Take another';
   @Input() btnAcceptCapture: string = 'Accept capture';
@@ -830,13 +828,12 @@ export class NgxCamShoot {
     if(config==undefined) return;
     this.displayTitle = config.displayTitle??this.displayTitle;
     this.title = config.title??this.title;
-    this.showTitleFMIcon = config.showTitleFMIcon??this.showTitleFMIcon;
+    this.showFaceMode = config.showFaceMode??this.showFaceMode;
     this.canChangeMode = config.canChangeMode??this.canChangeMode;
     this.type = config.type??this.type;
     this.color = config.color??this.color;
     this.usePreview = config.usePreview??this.usePreview;
     this.showConfig = config.showConfig??this.showConfig;
-    this.showFaceMode = config.showFaceMode??this.showFaceMode;
     this.btnTakeAnother = config.btnTakeAnother??this.btnTakeAnother;
     this.btnAcceptCapture = config.btnAcceptCapture??this.btnAcceptCapture;
   }

@@ -4,20 +4,24 @@
   "author": "Rzo! <rzo.idev@gmail.com> (https://github.com/RzoDev)",
   "description": "An angular component to use you device's cameras easily and obtain and save images faster.",
   "repository": {
-    "type": "github",
-    "url": "https://github.com/RzoDev/ngx-cam-shoot.git"
+    "type": "git",
+    "url": "git+https://github.com/RzoDev/ngx-cam-shoot.git"
   },
   "bugs": {
     "url": "https://github.com/RzoDev/ngx-cam-shoot/issues"
   },
   "homepage": "https://github.com/RzoDev/ngx-cam-shoot",
   "keywords": [
-    "angular",
-    "cam shoot",
-    "webcam",
-    "cam",
-    "photo",
-    "selfie"
+    "Angular",
+    "Angular 18",
+    "Cam Shoot",
+    "Webcam",
+    "Camera",
+    "Photo",
+    "Selfie",
+    "Smartphone",
+    "Tablet",
+    "Phone"
   ],
   "license":"MIT",
   "peerDependencies": {
@@ -29,6 +33,6 @@
   },
   "sideEffects": false,
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://registry.npmjs.org"
   }
 }
