@@ -9,7 +9,8 @@ Thought to use on mobile devices.
 
 - User interfaz friendly and easily to use
 - FaceMode interactive (change from front to back)
-- Can use Flashlight (If the current camera device support)
+- Can use Flashlight feature (If the current camera device support)
+- Can use Zoom feature
 - Preview of image captured
 - Interface color configurable
 - Can select the camera device you want to use
@@ -81,7 +82,7 @@ openCam(){
 <ngx-cam-shoot #cam (sendImage)="receiveCapture($event)"/>
 ```
 
-## Config
+## Configuration
 
 **Inputs** You can config the next features
 
