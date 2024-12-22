@@ -974,21 +974,21 @@ export class NgxCamShoot {
     } */
 
 
-    //es camara delantera
+    //is front
     if(this.faceMode==eCamShootFaceMode.USER){
       this.canvas.nativeElement.width = webcam.videoWidth;
       this.canvas.nativeElement.height = webcam.videoHeight;
       ctx?.scale(-1, 1);
       ctx?.drawImage(image, 0, 0, this.canvas.nativeElement.width*-1, this.canvas.nativeElement.height);
     }else{
-      //es camara trasera
-      //es sin marco de disparo
+      //is back
+      //without focus marker
       if(this.type==eCamShootType.DEFAULT){
           this.canvas.nativeElement.width = webcam.videoWidth;
           this.canvas.nativeElement.height = webcam.videoHeight;
           ctx?.drawImage(image, 0, 0, this.canvas.nativeElement.width, this.canvas.nativeElement.height);
       }else{
-        //toma de documento (rotado)
+        //shoot document (rotate)
         this.canvas.nativeElement.width = webcam.videoHeight;
         this.canvas.nativeElement.height = webcam.videoWidth;
 
