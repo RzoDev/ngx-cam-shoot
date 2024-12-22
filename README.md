@@ -7,7 +7,7 @@ Thought to use on mobile devices.
 
 ## Features
 
-- User interfaz friendly and easily to use
+- UI friendly and easily to use
 - FaceMode interactive (change from front to back)
 - Can use Flashlight feature (If the current camera device support)
 - Can use Zoom feature

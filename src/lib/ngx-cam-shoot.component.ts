@@ -29,7 +29,6 @@ export interface ICamShootConfig{
   type?: eCamShootType;
   color?: string;
   usePreview?: boolean;
-  showConfig?: boolean;
   btnTakeAnother?: string;
   btnAcceptCapture?: string;
 }
@@ -112,7 +111,6 @@ interface  IZoomConfig{
           </ng-container>
         </select>
       </div>
-      <button *ngIf="showConfig" role="btn" class="btnx btn-config" (click)="takeCapture()">&nbsp;</button>
     </div>
     <div class="controls">
       <div class="zoom" *ngIf="canActiveZoom && !isDocument()">
@@ -728,7 +726,6 @@ export class NgxCamShoot {
   @Input() title: string = 'Capture image';
   @Input() showFaceMode: boolean = false;
   @Input() usePreview: boolean = true;
-  @Input() showConfig: boolean = false;
   @Input() showErrors: boolean = false;
   @Input() debugMode: boolean = false;
   @Input() btnTakeAnother: string = 'Take another';
@@ -833,7 +830,6 @@ export class NgxCamShoot {
     this.type = config.type??this.type;
     this.color = config.color??this.color;
     this.usePreview = config.usePreview??this.usePreview;
-    this.showConfig = config.showConfig??this.showConfig;
     this.btnTakeAnother = config.btnTakeAnother??this.btnTakeAnother;
     this.btnAcceptCapture = config.btnAcceptCapture??this.btnAcceptCapture;
   }
