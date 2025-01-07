@@ -59,7 +59,7 @@ import { NgxCamShoot } from 'ngx-cam-shoot';
 ,
 ```
 
-3. Add the NgxCamShoot tag element on yout html component and bind it, you can trigger the cam shoot using the initCapture() method
+3. Add the NgxCamShoot tag element on your Html component and bind it, you can trigger the cam shoot using the initCapture() method
 
 ```html
 <ngx-cam-shoot #cam (sendImage)="receiveCapture($event)"/>
@@ -101,3 +101,5 @@ openCam(){
 
 **(*)** These inputs are included in the configuration input.
 
+**Output** You need config the output image
+- **(sendImage) (EventEmitter<string>):** Get the image as Data URI string;
