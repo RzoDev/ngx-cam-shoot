@@ -86,20 +86,20 @@ openCam(){
 
 **Inputs** You can config the next features
 
-- **[config] (ICamShootConfig):** obect to set default config (*).
-- **(*)[canChangeMode]:** show change mode button (default = true);
-- **(*)[type]:** set the custom camera mode (default = eCamShootType.DEFAULT);
-- **(*)[color]:** Any css color format RGB color for skin (default = '#282828');
-- **(*)[displayTitle]:**  = show title bar (default = true);
-- **(*)[title]:** title description (default = 'Capture image');
-- **(*)[showFaceMode]:** show face mode icon on title bar (default = false);
-- **[usePreview]:** active capture preview mode (default = true);
-- **[showErrors]:** show error on camera (default = false);
-- **[debugMode]:** active debug mode (default = false);
-- **(*)[btnTakeAnother]:** text on button to take another capture (default = 'Take another');
-- **(*)[btnAcceptCapture]:** text on button to accept capture (default = 'Accept capture');
+- `[config] (ICamShootConfig)`: obect to set default config (*).
+- (*)[canChangeMode]`: show change mode button (default = true);
+- (*)[type]`: set the custom camera mode (default = eCamShootType.DEFAULT);
+- (*)[color]`: Any css color format RGB color for skin (default = '#282828');
+- (*)[displayTitle]`:  = show title bar (default = true);
+- (*)[title]`: title description (default = 'Capture image');
+- (*)[showFaceMode]`: show face mode icon on title bar (default = false);
+- [usePreview]`: active capture preview mode (default = true);
+- [showErrors]`: show error on camera (default = false);
+- [debugMode]`: active debug mode (default = false);
+- (*)[btnTakeAnother]`: text on button to take another capture (default = 'Take another');
+- (*)`[btnAcceptCapture]`: text on button to accept capture (default = 'Accept capture');
 
 **(*)** These inputs are included in the configuration input.
 
 **Output** You need config the output image
-- **(sendImage) (EventEmitter<string>):** Get the image as Data URI string;
+- `(sendImage) (EventEmitter<string>)`: Get the image as Data URI string;
