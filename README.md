@@ -99,7 +99,7 @@ openCam(){
 - (*)`[btnTakeAnother]`: text on button to take another capture (default = 'Take another');
 - (*)`[btnAcceptCapture]`: text on button to accept capture (default = 'Accept capture');
 
-**(*)** These inputs are included in the configuration input.
+**(*)** These inputs are included in `[config] (ICamShootConfig)` input.
 
 **Output** You need config the output image
 - `(sendImage) (EventEmitter<string>)`: Get the image as Data URI string;
