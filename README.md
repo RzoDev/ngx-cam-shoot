@@ -89,7 +89,7 @@ openCam(){
 - `[config] (ICamShootConfig)`: obect to set default config (*).
 - (*)`[canChangeMode]`: show change mode button (default = true);
 - (*)`[type]`: set the custom camera mode (default = eCamShootType.DEFAULT);
-- (*)`[color]`: Any css color format RGB color for skin (default = '#282828');
+- (*)`[color]`: Any CSS color format RGB/Hex color for skin (default = '#282828');
 - (*)`[displayTitle]`:  = show title bar (default = true);
 - (*)`[title]`: title description (default = 'Capture image');
 - (*)`[showFaceMode]`: show face mode icon on title bar (default = false);
