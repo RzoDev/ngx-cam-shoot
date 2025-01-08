@@ -1,6 +1,6 @@
 {
   "name": "ngx-cam-shoot",
-  "version": "1.0.0",
+  "version": "1.18.0",
   "author": "Rzo! <rzo.idev@gmail.com> (https://github.com/RzoDev)",
   "description": "An angular component to use you device's cameras easily. Obtain and save images faster. Thought to use on mobile devices.",
   "repository": {
