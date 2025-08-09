@@ -40,14 +40,13 @@ interface  IZoomConfig{
 }
 
 @Component({
-  selector: 'ngx-cam-shoot',
-  standalone: true,
-  imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule
-  ],
-  template: `
+    selector: 'ngx-cam-shoot',
+    imports: [
+        CommonModule,
+        FormsModule,
+        ReactiveFormsModule
+    ],
+    template: `
  <ng-container *ngIf="usePreview && displayPreview">
   <div class="cam-shoot-backdrop"></div>
   <div class="cam-shoot-preview">
@@ -124,7 +123,7 @@ interface  IZoomConfig{
   </div>
 </div>
   `,
-  styles: `*, ::before, ::after {
+    styles: `*, ::before, ::after {
     box-sizing: border-box;
 }
 .cam-shoot-backdrop{
