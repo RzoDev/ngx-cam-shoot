@@ -46,6 +46,7 @@ interface  IZoomConfig{
         FormsModule,
         ReactiveFormsModule
     ],
+    standalone: true,
     template: `
  <ng-container *ngIf="usePreview && displayPreview">
   <div class="cam-shoot-backdrop"></div>

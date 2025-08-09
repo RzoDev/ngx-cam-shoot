@@ -17,7 +17,7 @@ Thought to use on mobile devices.
 
 ## Prerequisites
 
-- Angular: `>=18.2.0`
+- Angular: `>=19.2.9`
 
 **Important:** To use in localhost, you must be serve on https context for modern browsers to permit WebRTC/UserMedia access.
 
@@ -43,13 +43,12 @@ import { NgxCamShoot } from 'ngx-cam-shoot';
 })
 ```
 
-Or directly on the component where you want to use using **standalone** feature
+Or directly on the component where you want to use using **standalone** feature (implicit)
 
 ```typescript
 import { NgxCamShoot } from 'ngx-cam-shoot';
 
 @Component({
-  standalone: true,
   imports: [
     NgxCamShoot,
     ...
