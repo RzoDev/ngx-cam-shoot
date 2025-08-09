@@ -17,7 +17,7 @@ Thought to use on mobile devices.
 
 ## Prerequisites
 
-- Angular: `>=19.2.9`
+- Angular: `>=19.2.0`
 
 **Important:** To use in localhost, you must be serve on https context for modern browsers to permit WebRTC/UserMedia access.
 
